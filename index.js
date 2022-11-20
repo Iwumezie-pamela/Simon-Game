@@ -25,8 +25,7 @@ function nextSequence() {
 
     playSound(randomChosenColour);
 
-    h1.text('level ' + level);
-    
+    h1.text('level ' + level); 
 }
 
 function playSound(name) {
@@ -34,14 +33,11 @@ function playSound(name) {
     audio.play();
 }
 
-
-
 button.click(function () {
     let userChosenColour = $(this).attr('id');
     userClickedPattern.push(userChosenColour);
     playSound(userChosenColour);
     animatePress(userChosenColour);
-
     checkAnswer(userClickedPattern.length-1);
 }) 
 
